@@ -1,0 +1,279 @@
+body{
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    font-size: 0.93rem;
+    margin: 0px;
+    padding:0px;
+    background-color:#ffffff;
+}
+.bg-colored {
+    background-color: rgb(102,38,101);
+    color:#ffffff;
+}
+.container {
+    display: flex; /*format all childern using flex box*/
+    flex-direction: column; /* orient the childern in a horizontal row*/
+    align-items: center; /* vertical alignment */
+    justify-content: center; /* center the items horizontally */
+    margin:auto; /* when the container width is specified, the margin auto will center the container within its parent container */
+    overflow: hidden; /* when the page size gets smaller, the overflow content is clipped and the rest is not visible*/
+    text-align: center; /*  horizontal  alignment of texts */
+    width: 80%; /* width of the container in relation top its parent */
+}
+/* ul has a default margin and padding */
+ul {
+    margin: 0;
+    padding: 0;
+}
+header {
+    border-bottom: 3px solid #FFC0CB;
+    padding: 15px 0;
+}
+header a {
+    color: #ffffff; /* white text */
+    text-decoration: none; /* no underline */
+    text-transform: uppercase; /* converts to uppercase */
+    font-size: 1rem; /* 15x font size */
+}
+header li {
+    padding: 0 20px; /* seperate menu items*/
+}
+header h1{
+    margin: 0;
+    font-weight: normal;
+}
+header h1 .highlight,
+header .current a {
+    color: #FFC0CB;
+}
+header nav {
+    margin-left: auto; /* push this element to the right*/
+}
+
+header nav ul{
+    list-style: none; /* remove the bullets */
+    display: flex; /* fomrat all children as flexbox elements */
+    flex-direction: row; /* orient the childern in the horizontal row  */
+    justify-content: center;/* center the items horizontally */
+    margin: 0;
+    padding: 0;
+}
+nav a:hover{
+    color: #FFC0CB;
+}
+
+section#showcase {
+    min-height: 400px; /* set the minimum height of the box */
+    background-image: url("../Lab04/images/bakery-hero-image-1920.jpg");
+    background-size: cover;
+    background-position: center; /* position the image to the center of the block*/
+    text-align: center; /* align text to the center*/
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+
+section#showcase .showcase-inner{
+    display: block;
+    width: 100%;
+    background-color: rgba(0,0,0.5);
+    background: linear-gradient( rgba(0,0,0,0), rgba(0, 0, 0,0.5));   
+    display: flex;
+    flex-direction: row;
+}
+section#showcase .container {
+	flex-direction : column;
+}
+section#showcase h2{
+    font-size: 4em;
+    font-weight: normal;
+    text-shadow: 0px 0px 30px #444;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+section#showcase p {
+    font-size: 1.25rem; /* 20px */
+}
+section#newsletter {
+    padding: 15px 0;
+}
+section#newsletter input{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+section#newsletter form {
+    margin-right: auto; /* push the form to the right */
+}
+.button-1{
+    height: 40px;
+    background-color: rgb(185, 11, 112);
+    border: none;
+    padding: 0 20px;
+    color: #ffffff;
+}
+section#boxes {
+    margin-top: 20px;
+}
+section#boxes .box {
+    padding: 10px;
+    text-align: center;
+}
+section#boxes img {
+    width: 90px;
+}
+section#content .container {
+	/* this style only applies to the container section inside the
+	section with an id of content */
+	align-items: start; /* in flexbox, top top - start and bottom - end */
+	text-align: left;
+	margin: 1rem auto;
+}
+aside {
+	padding: 0 1rem 1rem 1rem; /* add padding to the column but not on top */
+	margin-left: 0; /* seperate the content horizontally */
+}
+
+/* Catering HTML */
+.cateringPs {
+    background-color: rgb(253, 220, 226);
+    padding: 20px;
+    margin: 10px;
+}
+/* Order Page*/
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #FFC0CB;
+    text-align: center;
+    background-color: rgb(177, 3, 130);
+}
+/* override the width of text area on mobile */
+textarea {
+    max-width: 200px;
+}
+@media (min-width:768px){
+
+    /* Restore the showcase h1 height */
+    section#showcase h2{
+        font-size: 6em ;
+    }
+    section#showcase .showcase-inner{
+    background-image: url('../images/bakery-hero-image-1920.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    }
+
+    /*Restore width based upon teaxt area "cols"*/
+    textarea{
+        max-width:inherit; 
+    }
+    /*stacking up elements in desktops side by side again*/
+    .container{
+        flex-direction:row; 
+    }
+    /* this will stop the newsletter from centring in the section*/
+    section#newsletter form {
+        margin-right:0; 
+    }
+    #newsletter .container h3{
+        margin-right:auto;
+    }
+    /* give the aside some left white space*/
+    aside {
+        margin-left: 3rem;
+    }
+}
+/* reset the header container so that our mobile menu can go full width */
+header .container {width:100%}
+header .container #branding{width:80%}
+/*Mobile needs to go full width, and be aligned center*/
+nav {
+    text-align: center;
+    line-height: 70px;
+    width: 100%;
+}
+/*Hidding the nav bar for mobile*/
+header nav ul {
+    display: none;
+}
+/*Make the mobile menu a bottom border (as they will be arranged vertically)*/
+nav ul a {
+    display: block;
+    border-top:1px solid #EAEAEB;
+}
+/*Hidding the checkbox elemnt that stores the state of the menu*/
+
+#toggle {
+    display: none;
+}
+/*if the toggle checkbox is checked, show the menu ul*/
+
+#toggle:checked ~ ul {
+    display: block;
+}
+/* override the padding that was applied in Lab 06 */
+header li { padding: 0;}
+
+/* suck up the bottom of the <header> by 15px, so it looks like the menu doesn't have extra margin */
+header nav ul {margin-bottom:-15;}
+/* style the hamburger element */
+nav label { font-size: 26px;}
+
+/* set the styles for the non-mobile menu */
+@media only screen and (min-width:768px) {
+    /* make the nav block size automatically rather than 80%*/
+    nav {width: auto;}
+    nav label{display: none;} /*hide the humburger on desktops*/
+
+/* snug the nav bar up to the right edge */
+header nav { margin-right: 0px;}
+/* Make the menu horizontal again*/
+header nav ul {
+    display: flex;
+    flex-direction: row;
+}
+/* Undo the mobile styling*/
+nav ul a {
+    border-top:0;
+    margin:0;
+    padding: 0 10px; /* Need to have only a bit of padding for small tablets in portrait mode*/
+}
+header nav ul {
+    margin-bottom: 0;
+}
+/* Expand out the header to almost full width*/
+
+header .container{width:95%;}
+header .container #branding{width:auto;}
+}
+@media only screen and (min-width:1000px){
+   /*add more padding for links on large tablets/desktop*/
+    nav ul a{
+        padding:0 20px;
+    }
+    /* Restore the heading container width*/
+    header .container{width:80%;}
+}
+
+h1, h2, h3 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight:400 ;
+}
+
+.box .fa-birthday-cake {
+    font-size: 5em;
+    color: rgb(197,26,132);
+}
+
+.box .fa-bread-slice{
+    font-size: 5em;
+    color:rgb(197,26,132);
+}
+.box .fa-cookie {
+    font-size: 5em;
+    color:rgb(197,26,132);
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bakery Webpage" />
+    <meta
+      name="keywords"
+      content="doughnuts, cakes, croissants, macarones, pies"/>
+    <meta name="author" content="Shayan Abdmoakhar" />
+    <title>Order Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style2.css">
+  </head>
+  <body>
+    <header class="bg-colored">
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Tasty </span>Bakery</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="recipes.html">Recipies</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li class="current"><a href="order.html">Order</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="newsletter" class="bg-colored">
+      <div class="container">
+        <h3>Subscribe to Newsletter</h3>
+        <form>
+          <input type="email" name="email" id="email" placeholder="Enter Email..." required/>
+          <button type="submit" name="submit" class="button-1">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+    <section id="content">
+      
+      <div class="container">
+        <main>  
+          <h2>Order</h2>
+          <p>Please fill in the form below. Payment is made at time of delivery or pickup.</p>
+         <form id="order-form" action="" method="post">
+
+              <div>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" class="personal-info" name="firstname" placeholder="First Name" required>
+                
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" class="personal-info" name="lastname" placeholder="Last Name" required>
+            
+                <label for="email-address">Email Address:</label>
+                <input id="email-address" type="email" class="personal-info" name="email" placeholder="Email" required>
+            
+                <label for="contact">Phone Number:</label>
+                <input type="tel" name="phone-number" class="personal-info" id="contact" placeholder="Phone Number" required>
+              </div>
+              <!-- Delivery Method Info -->
+              <h2>Delivery Details</h2>
+              <br>
+              <div>
+                <label for="delivery"><strong>Via:</strong></label>
+                <select name="delivery-method" id="delivery">
+                    <option value="Curbside-Pickup" selected="selected">Curbside Pickup</option>
+                    <option value="Pickup-In-Store">Store Pickup</option>
+                    <option value="Courier-Delivery">Deliver Via Courier ($25 Charge)</option>
+                </select>
+            </div>
+            <div>
+               <!-- Menu/Order Info -->
+              <h2>Order Items</h2>
+              <br>
+              <input type="checkbox" id="checkbox"> 
+              <label for="checkbox">Macarons($1 each)</label>
+              <select name="select">
+                  <option value="assorted">Assorted</option>
+                  <option value="medium">Medium</option>
+                  <option value="larger">Large</option>
+              </select>
+              <input type="number" class="quantity" name="quantity" placeholder="0" min="0" max="100">
+              <br>
+              <input type="checkbox" id="checkbox2"> 
+              <label for="checkbox2">Doughnuts($2 each)</label>
+              <select name="select2">
+                  <option value="assorted">Assorted</option>
+                  <option value="medium">Medium</option>
+                  <option value="larger">Large</option>
+              </select>
+              <input type="number" class="quantity" name="quantity" placeholder="0" min="0" max="100">
+              <br>
+              <input type="checkbox" id="checkbox3"> 
+              <label for="checkbox3">Croissants($2 each)</label>
+              <select name="select3" id="croissants">
+                  <option value="assorted">Traditional</option>
+                  <option value="medium">Medium</option>
+                  <option value="larger">Large</option>
+              </select>
+              <input type="number" class="quantity" name="quantity" placeholder="0" min="0" max="100">
+              <br>
+              <input type="checkbox" id="checkbox4"> 
+              <label for="checkbox4">Pies($10 each)</label>
+              <select name="select3" id="pie">
+                  <option value="Apple">Apple</option>
+                  <option value="Blueberry">Blueberry Pie</option>
+                  <option value="chockolate">chocolate Pie</option>
+              </select>
+              <input type="number" class="quantity" name="quantity" placeholder="0" min="1" max="3">
+              <br>
+              <input type="checkbox" id="checkbox5"> 
+              <label for="checkbox5">8' Cakes($25 each)</label>
+              <select name="select3" id="pie">
+                  <option value="Apple">Lemon</option>
+                  <option value="Blueberry">Strawberry Cake</option>
+                  <option value="chocolate">Chocolate Cake</option>
+              </select>
+              <input type="number" class="quantity" name="quantity" placeholder="0" min="1" max="3" >
+            </div>  
+            <div>
+              <h2>Order Instructions</h2>
+              <br>
+              <h5>If you have a preference for any of the above ordered items, please specify below</h5>
+              <textarea name="order-inst" id="instruction" cols="60" rows="5" placeholder="Enter Comments Here"></textarea>
+            </div>
+            <div>
+              <h4>Payment Type</h4>
+              <br>
+              <input type="radio" name="payment" id="debit" value="debit">
+              <label for="debit">Debit</label>
+
+              <input type="radio" name="payment" id="cash" value="cash">
+              <label for="cash">Cash</label>
+
+              <input type="radio" name="payment" id="master-card" value="master/visa" checked="checked">
+              <label for="master-card">Visa/Mastercard</label>
+            </div>
+          <!-- Payment Info -->
+            <div>
+                <button class="button-1 order-button">Place Order Now</button>
+            </div>
+      </form>
+    </main>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; 2022 - Tasty Bakery</p>
+      </div>
+    </footer>
+  </body>
+</html>

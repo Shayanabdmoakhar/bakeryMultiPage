@@ -1,0 +1,69 @@
+
+main{
+    width: auto;
+    padding-right: 20px;
+    background-color: pink;
+    padding: 20px;
+ }
+
+.personal-info{
+    height: 30px;
+    display: block;
+    width: 90%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#delivery{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#macarons{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#doughnuts{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#croissants{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#pie{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+  
+}
+#cakes{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.quantity{
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+}
+#instruction{
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.order-button{
+    width: 100%;
+}
